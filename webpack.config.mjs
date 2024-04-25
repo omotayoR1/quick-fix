@@ -89,7 +89,23 @@ export default (env) => {
        * in their `package.json` might not work correctly.
        */
       ...Repack.getResolveOptions(platform),
-
+      extensions: [
+    `.${platform}.js`,
+    ".native.js",
+    ".js",
+    `.${platform}.jsx`,
+    ".native.jsx",
+    ".jsx",
+    `.${platform}.ts`,
+    ".native.ts",
+    ".ts",
+    `.${platform}.tsx`,
+    ".native.tsx",
+    ".tsx",
+    `.${platform}.json`,
+    ".native.json",
+    ".json",
+  ]
       /**
        * Uncomment this to ensure all `react-native*` imports will resolve to the same React Native
        * dependency. You might need it when using workspaces/monorepos or unconventional project
